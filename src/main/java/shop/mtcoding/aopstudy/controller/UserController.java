@@ -26,7 +26,8 @@ public class UserController {
     }
 
     @GetMapping("/user/1") // 인증 필요 없음
-    public String userInfo() {
+    public String userInfo(@LoginUser User user) {
+        // System.out.println(user.getUsername());
         return "user ok";
     }
 
